@@ -1,0 +1,198 @@
+:root{
+    --mainColor: rgb(122, 121, 194);
+}
+
+body{
+    background-color: var(--mainColor);
+    font-family: 'Lato', sans-serif;
+}
+
+.message{
+    display: none;
+}
+
+.container{
+    background: linear-gradient(to right, #282F3B, #3E424E);
+    width: 450px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    border-bottom:var(--mainColor) solid 1px;
+    border-left: var(--mainColor) solid 1px;
+    box-shadow: -10px 8px 5px rgba(0,0,0,0.5);
+}
+
+.card{
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+input{
+    color: #F3F3F3;
+    border: none;
+    background: transparent;
+    height: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    border-radius: 10px;
+}
+
+input:focus{
+    outline: none;
+}
+
+input::placeholder{
+    color: #ebf5ed35;
+}
+
+.iNumber{
+    left: 5%;
+    width: 90%;
+    top: 50%;
+    font-size: 35px;
+}
+
+.iName{
+    width: 50%;
+    top: 80%;
+    left: 5%;
+}
+
+.title1{
+    position: absolute;
+    top: 66%;
+    left: 5%;
+}
+
+.iDate{
+    top: 80%;
+    left: 60%;
+    width: 15%;
+}
+
+.title2{
+    position: absolute;
+    top: 66%;
+    left: 60%;
+}
+
+.iCvv{
+    top: 80%;
+    left: 85%;
+    width: 10%;
+}
+
+.title3{
+    position: absolute;
+    top: 66%;
+    left: 85%;
+}
+
+h3{
+    pointer-events: none;
+    font-size: 16px;
+    font-weight: 300;
+    color: #B5B9C1;
+}
+
+/*circles*/
+.circle1{
+    background-color: var(--mainColor);
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 50%;
+    left: -20%;
+    top: -10vh;
+}
+
+.circle2{
+    position: absolute;
+    left: 60%;
+    top: 14vh;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--mainColor);
+}
+
+/*pin*/
+.pin{
+    padding: 1%;
+    z-index: 100;
+    position: absolute;
+    width:70px;
+    height: 50px;
+    background-color: #C6B890;
+    border-radius: 15px;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    left: 5%;
+}
+
+.pin li{
+    list-style: none;
+    border-radius: 10px;
+    width: 27px;
+    height: 10px;
+    border: 1px solid #000;
+    background: transparent;
+}
+
+/*visa img*/
+.visa{
+    user-select: none;
+    pointer-events: none;
+    z-index: 200;
+    position: absolute;
+    top: 8%;
+    right: 10%;
+    width: 100px;
+    filter: invert(.9);
+}
+
+/*skin button*/
+.skin{
+    color: #595b60;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--mainColor);
+    border: 2px solid rgb(124, 124, 124);
+    cursor: pointer;
+    transition: all ease .2s;
+}
+
+.skin:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+/*media query*/
+@media screen and (max-width: 1000px) {
+    .container{
+        display: none;
+    }
+
+    .message{
+        color: #595b60;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+    }
+}
